@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V10</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="w3.css">
+    <title>Login V10</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 	
@@ -21,13 +25,13 @@
 			<input id="Name" class="w3-input" type="text">
 
 			<label>Optional comment</label>
-			<input class="w3-input" type="text">
+			<input id="Comment" class="w3-input" type="text">
 
-			<button  onclick="saveName()" class="w3-btn w3-green w3-margin w3-round">OK</button>
+			<button  onclick="OK()" type='button' class="w3-btn w3-green w3-margin w3-round">OK</button>
 		</form>
 
 
 	</div>
-	<script src="script.js"></script>
+	
 </body>
 </html>
