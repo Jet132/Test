@@ -10,8 +10,8 @@ var config = {
 firebase.initializeApp(config);
 var databaseRef = firebase.database().ref('users/');
 
-const nameRegex = /@([a-zA-Z]+)#[0-9]+/gm;
-const idRegex = /@[a-zA-Z]+#([0-9]+)/gm;
+const nameRegex = /@([^#@:]+)#[0-9]+/gm;
+const idRegex = /@[^#@:]+#([0-9]+)/gm;
 
 const checkpoint = 1;
 
