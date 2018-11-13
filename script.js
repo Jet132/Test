@@ -42,7 +42,7 @@ function OK() {
 
     console.log(rawName, name, id, comment);
     deleteError();
-    window.location.href = "/thanks.html"
+    window.location.href = "./thanks.html"
     //window.close();
 }
 
