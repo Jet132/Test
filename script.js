@@ -1,3 +1,4 @@
+
 var config = {
     apiKey: "AIzaSyDiCiSDgtMdiBld4gExarNqPScJ6NbvLGY",
     authDomain: "cb-puzzel.firebaseapp.com",
@@ -37,6 +38,7 @@ function OK() {
         createAccount(name, id, comment);
     } catch (err) {
         displayError("press F12 and copy error to report to mod");
+		return;
     }
 
     console.log(rawName, name, id, comment);
