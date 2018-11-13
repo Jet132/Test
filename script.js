@@ -1,4 +1,3 @@
-
 var config = {
     apiKey: "AIzaSyDiCiSDgtMdiBld4gExarNqPScJ6NbvLGY",
     authDomain: "cb-puzzel.firebaseapp.com",
