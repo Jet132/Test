@@ -17,7 +17,6 @@ const idRegex = /@[^#@:]+#([0-9]+)/gm;
 const checkpoint = 1;
 
 function OK() {
-    deleteError();
     var rawName = document.getElementById('Name').value;
     regex.lastIndex = 0;
     if (regex.exec(rawName) == null) {
@@ -29,22 +28,35 @@ function OK() {
     try {
         var name = nameRegex.exec(rawName)[1];
         var id = parseInt(idRegex.exec(rawName)[1]);
-        var comment = document.getElementById('Comment').value;
+
     } catch (err) {
+        console.log(err);
         displayError("press F12 and copy error to report to mod");
+        return;
+    }
+    var comment = document.getElementById('Comment').value;
+    if (comment.length > 200) {
+        displayError("comment is longer then 200 characters");
+        return;
     }
 
+    /*try {
+        console.log("saving comment");
+        saveCheckpoint(name, id, comment);
+    } catch (err) {
+        console.log(err);
+        displayError("account not found: use same name as last time");
+        return;
+    }
+    window.location.href = "./thanks.html";*/
     try {
+        console.log("creating account");
         createAccount(name, id, comment);
     } catch (err) {
+        console.log(err);
         displayError("press F12 and copy error to report to mod");
-		return;
+        return;
     }
-
-    console.log(rawName, name, id, comment);
-    deleteError();
-    //window.location.href = "./thanks.html"
-    //window.close();
 }
 
 function createAccount(name, id, comment) {
@@ -64,23 +76,25 @@ function createAccount(name, id, comment) {
                 }
             });
         }
+        window.location.href = "./thanks.html";
     });
 }
 
 function saveCheckpoint(name, id, comment) {
-    databaseRef.child(name + id).child("checkpoints").child("check"+checkpoint).set({
+    databaseRef.child(name + id).child("checkpoints").child("check" + checkpoint).set({
         timestamp: firebase.database.ServerValue.TIMESTAMP,
         comment: comment
     });
 }
 
 function displayError(error) {
+    deleteError();
     var footer = document.createElement("footer");
-    var fatt = document.createAttribute("class");
-    fatt.value = "w3-container w3-red w3-round";
+    var fclass = document.createAttribute("class");
+    fclass.value = "w3-container w3-red w3-round";
     var fid = document.createAttribute("id");
     fid.value = "error";
-    footer.setAttributeNode(fatt);
+    footer.setAttributeNode(fclass);
     footer.setAttributeNode(fid);
 
     var para = document.createElement("p");
