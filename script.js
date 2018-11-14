@@ -43,7 +43,7 @@ function OK() {
 
     console.log(rawName, name, id, comment);
     deleteError();
-    window.location.href = "./thanks.html"
+    //window.location.href = "./thanks.html"
     //window.close();
 }
 
@@ -53,26 +53,23 @@ function createAccount(name, id, comment) {
             console.log("Account already created");
             saveCheckpoint(name, id, comment);
         } else {
-            var timestamp = new Date().getTime();
             databaseRef.child(name + id).set({
                 name: name,
                 id: id,
                 checkpoints: {
                     check1: {
-                        timestamp: timestamp,
+                        timestamp: firebase.database.ServerValue.TIMESTAMP,
                         comment: comment
                     }
                 }
             });
         }
     });
-    
 }
 
 function saveCheckpoint(name, id, comment) {
-    var timestamp = new Date().getTime();
     databaseRef.child(name + id).child("checkpoints").child("check"+checkpoint).set({
-        timestamp: timestamp,
+        timestamp: firebase.database.ServerValue.TIMESTAMP,
         comment: comment
     });
 }
