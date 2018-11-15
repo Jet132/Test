@@ -28,7 +28,6 @@ function OK() {
     try {
         var name = nameRegex.exec(rawName)[1];
         var id = parseInt(idRegex.exec(rawName)[1]);
-
     } catch (err) {
         console.log(err);
         displayError("press F12 and copy error to report to mod");
@@ -39,52 +38,34 @@ function OK() {
         displayError("comment is longer then 200 characters");
         return;
     }
-
-    /*try {
-        console.log("saving comment");
-        saveCheckpoint(name, id, comment);
-    } catch (err) {
-        console.log(err);
-        displayError("account not found: use same name as last time");
-        return;
-    }
-    window.location.href = "./thanks.html";*/
     try {
-        console.log("creating account");
-        createAccount(name, id, comment);
+        databaseRef.child(name + id).set({
+            name: name,
+            id: id,
+            checkpoints: {
+                check1: {
+                    timestamp: firebase.database.ServerValue.TIMESTAMP,
+                    comment: comment
+                }
+            }
+        }).then(function (snapshot) {
+            window.location.href = "./thanks.html";
+        }, function (error) {
+            databaseRef.child(name + id).child("checkpoints").child("check" + checkpoint).set({
+                timestamp: firebase.database.ServerValue.TIMESTAMP,
+                comment: comment
+            }).then(function (snapshot) {
+                window.location.href = "./thanks.html";
+            }, function (error) {
+                console.log(error);
+                displayError("press F12 and copy error to report to mod");
+            });
+
+        });
     } catch (err) {
         console.log(err);
         displayError("press F12 and copy error to report to mod");
-        return;
     }
-}
-
-function createAccount(name, id, comment) {
-    databaseRef.child(name + id).once('value').then(function (snapshot) {
-        if (snapshot.exists()) {
-            console.log("Account already created");
-            saveCheckpoint(name, id, comment);
-        } else {
-            databaseRef.child(name + id).set({
-                name: name,
-                id: id,
-                checkpoints: {
-                    check1: {
-                        timestamp: firebase.database.ServerValue.TIMESTAMP,
-                        comment: comment
-                    }
-                }
-            });
-        }
-        window.location.href = "./thanks.html";
-    });
-}
-
-function saveCheckpoint(name, id, comment) {
-    databaseRef.child(name + id).child("checkpoints").child("check" + checkpoint).set({
-        timestamp: firebase.database.ServerValue.TIMESTAMP,
-        comment: comment
-    });
 }
 
 function displayError(error) {
