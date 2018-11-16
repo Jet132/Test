@@ -9,11 +9,11 @@ var config = {
 firebase.initializeApp(config);
 var databaseRef = firebase.database().ref('users/');
 
-const regex = /@[^#@:]+#[0-9]+/gm;
-const nameRegex = /@([^#@:]+)#[0-9]+/gm;
-const idRegex = /@[^#@:]+#([0-9]+)/gm;
+var regex = /@[^#@:]+#[0-9]+/gm;
+var nameRegex = /@([^#@:]+)#[0-9]+/gm;
+var idRegex = /@[^#@:]+#([0-9]+)/gm;
 
-const checkpoint = 2;
+var checkpoint = 2;
 
 function OK() {
     var rawName = document.getElementById('Name').value;
@@ -40,16 +40,23 @@ function OK() {
 
     try {
         console.log("saving comment");
-         databaseRef.child(name + id).child("checkpoints").child("check" + checkpoint).set({
-                timestamp: firebase.database.ServerValue.TIMESTAMP,
-                comment: comment
-         }).then(function (snapshot) {
-             window.location.href = "./thanks.html";
-         }, function (error) {
-             console.log(error);
-             displayError("account not found: use same @ as last time");
-             
-         });
+        databaseRef.child(name + id).child("checkpoints").child("check" + checkpoint).set({
+            timestamp: firebase.database.ServerValue.TIMESTAMP,
+            comment: comment
+        }).then(function (snapshot) {
+        window.location.href = "./thanks.html";
+        }, function (error) {
+            databaseRef.child(name + id).once('value').then(function (snapshot) {
+                if (snapshot.exists()) {
+                    displayError("you reached this checkpoint to fast. Try again later and please report to mod to maby decrease minimum time.");
+                } else {
+                    displayError("account not found: use exact same @ as last time");
+                }
+            }, function (error) {
+                console.log(error);
+                displayError("press F12 and copy error to report to mod");
+            });            
+        });
     } catch (err) {
         console.log(err);
         displayError("press F12 and copy error to report to mod");

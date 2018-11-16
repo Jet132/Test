@@ -10,11 +10,11 @@ var config = {
 firebase.initializeApp(config);
 var databaseRef = firebase.database().ref('users/');
 
-const regex = /@[^#@:]+#[0-9]+/gm;
-const nameRegex = /@([^#@:]+)#[0-9]+/gm;
-const idRegex = /@[^#@:]+#([0-9]+)/gm;
+var regex = /@[^#@:]+#[0-9]+/gm;
+var nameRegex = /@([^#@:]+)#[0-9]+/gm;
+var idRegex = /@[^#@:]+#([0-9]+)/gm;
 
-const checkpoint = 1;
+var checkpoint = 1;
 
 function OK() {
     var rawName = document.getElementById('Name').value;
