@@ -1,28 +1,47 @@
 ﻿<!DOCTYPE html>
-<html lang=en>
+<html lang="en">
+
 <head>
-<title>Checkpoint 1</title>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width, initial-scale=1">
-<link rel=stylesheet href=w3.css>
-<script src=https://www.gstatic.com/firebasejs/5.5.8/firebase.js></script>
-<script src=https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js></script>
-<script src=https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js></script>
-<script src=script.js></script>
+    <title>Checkpoint 1</title>
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/277/PNG/512/PushBullet_30190.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="backgound.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
-<div id=card style=width:480px class="w3-card-4 w3-display-middle w3-round">
-<div class="w3-container w3-green w3-margin-bottom w3-round">
-<h2>Congratulations!</h2>
-<h6>You completed the first puzzle!<br />Please enter your discord @, so we know who is at each stage.</h6>
-</div>
-<form class=w3-container>
-<label>Discord name (remember for next checkpoint)</label>
-<input id=Name class=w3-input type=text placeholder=@trebuchet#1234>
-<label>Optional comment (200 chars. max)</label>
-<input id=Comment class=w3-input type=text placeholder="best puzzle ever!">
-<button onclick=OK() type=button class="w3-btn w3-green w3-margin w3-round">OK</button>
-</form>
-</div>
+    <div class="hero-bkg-animated">
+
+        <div id="card" style="width: 480px;" class="w3-card-4 w3-display-middle w3-round w3-white">
+
+            <div class="w3-container w3-green w3-margin-bottom w3-round">
+                <h2>Congratulations!</h2>
+                <h6>You completed the first puzzle!<br />Remember the mention you enter here.
+                </h6>
+            </div>
+
+            <form class="w3-container">
+
+                <label class="w3-left">Discord mention</label>
+                <input id="Name" class="w3-input w3-left w3-margin-bottom" type="text" placeholder="@trebuchet#1234">
+
+                <label class="w3-left">Comment (optional)</label>
+                <input id="Comment" class="w3-input w3-left" type="text" placeholder="best puzzle ever!">
+
+                <button onclick="OK()" type='button' class="w3-btn w3-green w3-margin w3-round w3-left">OK</button>
+            </form>
+
+            <!--<footer  class="w3-container w3-red w3-round" id="error">
+        <p>ERROR: </p>
+    </footer>-->
+
+        </div>
+    </div>
 </body>
+
 </html>

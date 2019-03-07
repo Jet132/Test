@@ -1,1 +1,88 @@
-var _0x55d687=function(){var _0x472257=!![];return function(_0xf1e887,_0x130679){var _0x2fe378=_0x472257?function(){if(_0x130679){var _0x5cc1ce=_0x130679['apply'](_0xf1e887,arguments);_0x130679=null;return _0x5cc1ce;}}:function(){};_0x472257=![];return _0x2fe378;};}();var _0x18d642=_0x55d687(this,function(){var _0xa72648=function(){return'\x64\x65\x76';},_0x559eb5=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x3c1760=function(){var _0x2a5b87=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x2a5b87['\x74\x65\x73\x74'](_0xa72648['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x1935b7=function(){var _0x1f6a92=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x1f6a92['\x74\x65\x73\x74'](_0x559eb5['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x3db4ce=function(_0x1d61fd){var _0x1a1533=~-0x1>>0x1+0xff%0x0;if(_0x1d61fd['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x1a1533)){_0x55c587(_0x1d61fd);}};var _0x55c587=function(_0x5384bb){var _0x162622=~-0x4>>0x1+0xff%0x0;if(_0x5384bb['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x162622){_0x3db4ce(_0x5384bb);}};if(!_0x3c1760()){if(!_0x1935b7()){_0x3db4ce('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x3db4ce('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x3db4ce('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x18d642();var _0x3eaffb=function(){var _0x71355f=!![];return function(_0x15ad95,_0x582e25){var _0x17b109=_0x71355f?function(){if(_0x582e25){var _0x257caf=_0x582e25['apply'](_0x15ad95,arguments);_0x582e25=null;return _0x257caf;}}:function(){};_0x71355f=![];return _0x17b109;};}();(function(){_0x3eaffb(this,function(){var _0x216d5f=new RegExp('function\x20*\x5c(\x20*\x5c)');var _0xa250d0=new RegExp('\x5c+\x5c+\x20*(?:_0x(?:[a-f0-9]){4,6}|(?:\x5cb|\x5cd)[a-z0-9]{1,4}(?:\x5cb|\x5cd))','i');var _0x2ef8a8=_0x561344('init');if(!_0x216d5f['test'](_0x2ef8a8+'chain')||!_0xa250d0['test'](_0x2ef8a8+'input')){_0x2ef8a8('0');}else{_0x561344();}})();}());var _0xb94509=function(){var _0x499894=!![];return function(_0x5005fd,_0x765943){var _0x519db3=_0x499894?function(){if(_0x765943){var _0x4b8ad8=_0x765943['apply'](_0x5005fd,arguments);_0x765943=null;return _0x4b8ad8;}}:function(){};_0x499894=![];return _0x519db3;};}();var _0x535059=_0xb94509(this,function(){var _0x3b26c7=function(){};var _0x31282a=function(){var _0x39ad16;try{_0x39ad16=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(_0x5766b0){_0x39ad16=window;}return _0x39ad16;};var _0x4f875e=_0x31282a();if(!_0x4f875e['console']){_0x4f875e['console']=function(_0x3b26c7){var _0x996a8b={};_0x996a8b['log']=_0x3b26c7;_0x996a8b['warn']=_0x3b26c7;_0x996a8b['debug']=_0x3b26c7;_0x996a8b['info']=_0x3b26c7;_0x996a8b['error']=_0x3b26c7;_0x996a8b['exception']=_0x3b26c7;_0x996a8b['trace']=_0x3b26c7;return _0x996a8b;}(_0x3b26c7);}else{_0x4f875e['console']['log']=_0x3b26c7;_0x4f875e['console']['warn']=_0x3b26c7;_0x4f875e['console']['debug']=_0x3b26c7;_0x4f875e['console']['info']=_0x3b26c7;_0x4f875e['console']['error']=_0x3b26c7;_0x4f875e['console']['exception']=_0x3b26c7;_0x4f875e['console']['trace']=_0x3b26c7;}});_0x535059();var config={'apiKey':'AIzaSyDiCiSDgtMdiBld4gExarNqPScJ6NbvLGY','authDomain':'cb-puzzel.firebaseapp.com','databaseURL':'https://cb-puzzel.firebaseio.com','projectId':'cb-puzzel','storageBucket':'cb-puzzel.appspot.com','messagingSenderId':'280161814307'};firebase['initializeApp'](config);var databaseRef=firebase['database']()['ref']('users/'),regex=/@[^#@:]+#[0-9]+/gm,nameRegex=/@([^#@:]+)#[0-9]+/gm,idRegex=/@[^#@:]+#([0-9]+)/gm,checkpoint=0x1;function OK(){var _0x54274b=document['getElementById']('Name')['value'];if(regex['lastIndex']=0x0,null!=regex['exec'](_0x54274b)){nameRegex['lastIndex']=0x0,idRegex['lastIndex']=0x0;try{var _0x327f59=nameRegex['exec'](_0x54274b)[0x1],_0x5947f7=parseInt(idRegex['exec'](_0x54274b)[0x1]);}catch(_0x3e87c5){return console['log'](_0x3e87c5),void displayError('press\x20F12\x20and\x20copy\x20error\x20to\x20report\x20to\x20mod');}var _0x5a2353=document['getElementById']('Comment')['value'];if(_0x5a2353['length']>0xc8)displayError('comment\x20is\x20longer\x20then\x20200\x20characters');else try{databaseRef['child'](_0x327f59+_0x5947f7)['set']({'name':_0x327f59,'id':_0x5947f7,'checkpoints':{'check1':{'timestamp':firebase['database']['ServerValue']['TIMESTAMP'],'comment':_0x5a2353}}})['then'](function(_0x54274b){window['location']['href']='./thanks.html';},function(_0x54274b){databaseRef['child'](_0x327f59+_0x5947f7)['child']('checkpoints')['child']('check'+checkpoint)['set']({'timestamp':firebase['database']['ServerValue']['TIMESTAMP'],'comment':_0x5a2353})['then'](function(_0x54274b){window['location']['href']='./thanks.html';},function(_0x54274b){console['log'](_0x54274b),displayError('press\x20F12\x20and\x20copy\x20error\x20to\x20report\x20to\x20mod');});});}catch(_0x48a371){console['log'](_0x48a371),displayError('press\x20F12\x20and\x20copy\x20error\x20to\x20report\x20to\x20mod');}}else displayError('please\x20enter\x20your\x20name\x20like\x20it\x20was\x20@ed');}setInterval(function(){_0x561344();},0xfa0);function displayError(_0xc650ec){deleteError();var _0x2cc74b=document['createElement']('footer'),_0x4315f6=document['createAttribute']('class');_0x4315f6['value']='w3-container\x20w3-red\x20w3-round';var _0x9b6048=document['createAttribute']('id');_0x9b6048['value']='error',_0x2cc74b['setAttributeNode'](_0x4315f6),_0x2cc74b['setAttributeNode'](_0x9b6048);var _0x24dd10=document['createElement']('p'),_0x37e471=document['createTextNode']('ERROR:\x20'+_0xc650ec);_0x24dd10['appendChild'](_0x37e471),_0x2cc74b['appendChild'](_0x24dd10),document['getElementById']('card')['appendChild'](_0x2cc74b);}function deleteError(){var _0xe9a025=document['getElementById']('card'),_0x4ae8a1=document['getElementById']('error');null!=_0x4ae8a1&&_0xe9a025['removeChild'](_0x4ae8a1);}function _0x561344(_0x147529){function _0x4301a6(_0x4bcc43){if(typeof _0x4bcc43==='string'){return function(_0x194230){}['constructor']('while\x20(true)\x20{}')['apply']('counter');}else{if((''+_0x4bcc43/_0x4bcc43)['length']!==0x1||_0x4bcc43%0x14===0x0){(function(){return!![];}['constructor']('debu'+'gger')['call']('action'));}else{(function(){return![];}['constructor']('debu'+'gger')['apply']('stateObject'));}}_0x4301a6(++_0x4bcc43);}try{if(_0x147529){return _0x4301a6;}else{_0x4301a6(0x0);}}catch(_0x490bc6){}}
+
+var config = {
+    apiKey: "AIzaSyDiCiSDgtMdiBld4gExarNqPScJ6NbvLGY",
+    authDomain: "cb-puzzel.firebaseapp.com",
+    databaseURL: "https://cb-puzzel.firebaseio.com",
+    projectId: "cb-puzzel",
+    storageBucket: "cb-puzzel.appspot.com",
+    messagingSenderId: "280161814307"
+};
+firebase.initializeApp(config);
+var databaseRef = firebase.database().ref('users/');
+
+var regex = /@[^#@:]+#[0-9]+/gm;
+var nameRegex = /@([^#@:]+)#[0-9]+/gm;
+var idRegex = /@[^#@:]+#([0-9]+)/gm;
+
+var checkpoint = 0;
+
+var endFile = "./thanks.html"
+
+function OK() {
+    var rawName = document.getElementById('Name').value;
+    regex.lastIndex = 0;
+    if (regex.exec(rawName) == null) {
+        displayError("please enter your name like it was mentioned");
+        return;
+    }
+    nameRegex.lastIndex = 0;
+    idRegex.lastIndex = 0;
+    try {
+        var name = nameRegex.exec(rawName)[1];
+        var id = parseInt(idRegex.exec(rawName)[1]);
+    } catch (err) {
+        console.log(err);
+        displayError("press F12 and copy error to report to mod");
+        return;
+    }
+    var comment = document.getElementById('Comment').value;
+    if (comment.length > 200) {
+        displayError("comment is longer then 200 characters");
+        return;
+    }
+    try {
+        databaseRef.child(name + id).set({
+            name: name,
+            id: id,
+            checkpoint: checkpoint,
+            timestamp: firebase.database.ServerValue.TIMESTAMP
+        }).then(function (snapshot) {
+            window.location.href = endFile;
+        }, function (error) {
+            console.log(error);
+            displayError("You can only check in once at each checkpoint. If you have never checked in before press F12, copy error code and report to mod.");
+            window.open(endFile);
+        });
+    } catch (err) {
+        console.log(err);
+        displayError("press F12 and copy error to report to mod");
+    }
+}
+
+function displayError(error) {
+    deleteError();
+    var footer = document.createElement("footer");
+    var fclass = document.createAttribute("class");
+    fclass.value = "w3-container w3-red w3-round";
+    var fid = document.createAttribute("id");
+    fid.value = "error";
+    footer.setAttributeNode(fclass);
+    footer.setAttributeNode(fid);
+
+    var para = document.createElement("p");
+    var text = document.createTextNode("ERROR: " + error);
+    para.appendChild(text);
+
+    footer.appendChild(para);
+    var parent = document.getElementById('card');
+    parent.appendChild(footer);
+}
+
+function deleteError() {
+    var parent = document.getElementById('card');
+    var error = document.getElementById('error');
+    if (error == null) {
+        return;
+    }
+    parent.removeChild(error);
+}

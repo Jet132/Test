@@ -1,1 +1,181 @@
-var _0x543e=["\x41\x49\x7A\x61\x53\x79\x44\x69\x43\x69\x53\x44\x67\x74\x4D\x64\x69\x42\x6C\x64\x34\x67\x45\x78\x61\x72\x4E\x71\x50\x53\x63\x4A\x36\x4E\x62\x76\x4C\x47\x59","\x63\x62\x2D\x70\x75\x7A\x7A\x65\x6C\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x61\x70\x70\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x62\x2D\x70\x75\x7A\x7A\x65\x6C\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D","\x63\x62\x2D\x70\x75\x7A\x7A\x65\x6C","\x63\x62\x2D\x70\x75\x7A\x7A\x65\x6C\x2E\x61\x70\x70\x73\x70\x6F\x74\x2E\x63\x6F\x6D","\x32\x38\x30\x31\x36\x31\x38\x31\x34\x33\x30\x37","\x69\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x70\x70","\x70\x61\x73\x73\x77\x6F\x72\x64\x73\x2F","\x72\x65\x66","\x64\x61\x74\x61\x62\x61\x73\x65","\x6C\x6F\x67","\x76\x61\x6C\x75\x65","\x70\x61\x73\x73\x77\x6F\x72\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x76\x61\x6C","\x6C\x69\x6E\x6B","\x63\x68\x69\x6C\x64","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x59\x6F\x75\x20\x74\x72\x69\x65\x64\x20\x74\x6F\x20\x6D\x61\x6E\x79\x20\x74\x69\x6D\x65\x73\x2E\x20\x57\x61\x69\x74\x20\x66\x6F\x72\x20","\x20\x73\x65\x63\x6F\x6E\x64\x73\x2E","\x54\x68\x65\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x20\x69\x73\x20\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x2E\x20\x54\x72\x69\x65\x73\x3A\x20","\x54\x68\x65\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x20\x69\x73\x20\x69\x6E\x63\x6F\x72\x72\x65\x63\x74","\x74\x68\x65\x6E","\x6F\x6E\x63\x65","\x70\x72\x65\x73\x73\x20\x46\x31\x32\x20\x61\x6E\x64\x20\x63\x6F\x70\x79\x20\x65\x72\x72\x6F\x72\x20\x74\x6F\x20\x72\x65\x70\x6F\x72\x74\x20\x74\x6F\x20\x6D\x6F\x64","\x70\x6F\x77","\x6C\x65\x6E\x67\x74\x68","","\x68","\x6B","\x80","\x00","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x73\x6C\x69\x63\x65","\x63\x6F\x6E\x63\x61\x74","\x66\x65\x72\x72\x6F\x72","\x66\x6F\x6F\x74\x65\x72","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x63\x6C\x61\x73\x73","\x63\x72\x65\x61\x74\x65\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x77\x33\x2D\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72\x20\x77\x33\x2D\x72\x65\x64\x20\x77\x33\x2D\x72\x6F\x75\x6E\x64","\x69\x64","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65\x4E\x6F\x64\x65","\x70","\x45\x52\x52\x4F\x52\x3A\x20","\x63\x72\x65\x61\x74\x65\x54\x65\x78\x74\x4E\x6F\x64\x65","\x65\x72\x72\x6F\x72","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x63\x61\x72\x64","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64"];var config={apiKey:_0x543e[0],authDomain:_0x543e[1],databaseURL:_0x543e[2],projectId:_0x543e[3],storageBucket:_0x543e[4],messagingSenderId:_0x543e[5]};firebase[_0x543e[6]](config);var databaseRef=firebase[_0x543e[9]]()[_0x543e[8]](_0x543e[7]),cooldown=10,maxTries=5,tries=maxTries,secCountdown=cooldown,counter=setInterval(function(){secCountdown--,console[_0x543e[10]](secCountdown,tries),0== secCountdown&& (secCountdown= cooldown,tries!= maxTries&& tries++)},1e3),secCounter=null;function OK(){if(0!= tries){tries--;var e=sha256(document[_0x543e[13]](_0x543e[12])[_0x543e[11]]);try{databaseRef[_0x543e[16]](e)[_0x543e[24]](_0x543e[11])[_0x543e[23]](function(e){null!= e[_0x543e[16]](_0x543e[15])[_0x543e[14]]()?window[_0x543e[18]][_0x543e[17]]= e[_0x543e[16]](_0x543e[15])[_0x543e[14]]():tries<= 0?(displayError(_0x543e[19]+ secCountdown.toString()+ _0x543e[20]),secCounter= setInterval(function(){updateError(_0x543e[19]+ secCountdown.toString()+ _0x543e[20]),1== secCountdown&& (clearInterval(secCounter),setTimeout(function(){deleteError()},1e3))},1e3)):displayError(_0x543e[21]+ tries.toString())},function(e){console[_0x543e[10]](e),displayError(_0x543e[22])})}catch(e){console[_0x543e[10]](e),displayError(_0x543e[25])}}}var sha256=function e(_0xbf80xc){function _0xbf80xd(e,_0xbf80xc){return e>>> _0xbf80xc| e<< 32- _0xbf80xc}for(var _0xbf80xe,_0xbf80xf,_0xbf80x10=Math[_0x543e[26]],_0xbf80x11=_0xbf80x10(2,32),_0xbf80x12=_0x543e[27],_0xbf80x13=_0x543e[28],_0xbf80x14=[],_0xbf80x15=8* _0xbf80xc[_0xbf80x12],_0xbf80x16=e[_0x543e[29]]= e[_0x543e[29]]|| [],_0xbf80x17=e[_0x543e[30]]= e[_0x543e[30]]|| [],_0xbf80x18=_0xbf80x17[_0xbf80x12],_0xbf80x19={},_0xbf80x1a=2;_0xbf80x18< 64;_0xbf80x1a++){if(!_0xbf80x19[_0xbf80x1a]){for(_0xbf80xe= 0;_0xbf80xe< 313;_0xbf80xe+= _0xbf80x1a){_0xbf80x19[_0xbf80xe]= _0xbf80x1a};_0xbf80x16[_0xbf80x18]= _0xbf80x10(_0xbf80x1a,0.5)* _0xbf80x11| 0,_0xbf80x17[_0xbf80x18++]= _0xbf80x10(_0xbf80x1a,1/ 3)* _0xbf80x11| 0}};for(_0xbf80xc+= _0x543e[31];_0xbf80xc[_0xbf80x12]% 64- 56;){_0xbf80xc+= _0x543e[32]};for(_0xbf80xe= 0;_0xbf80xe< _0xbf80xc[_0xbf80x12];_0xbf80xe++){if((_0xbf80xf= _0xbf80xc[_0x543e[33]](_0xbf80xe))>> 8){return};_0xbf80x14[_0xbf80xe>> 2]|= _0xbf80xf<< (3- _0xbf80xe)% 4* 8};for(_0xbf80x14[_0xbf80x14[_0xbf80x12]]= _0xbf80x15/ _0xbf80x11| 0,_0xbf80x14[_0xbf80x14[_0xbf80x12]]= _0xbf80x15,_0xbf80xf= 0;_0xbf80xf< _0xbf80x14[_0xbf80x12];){var _0xbf80x1b=_0xbf80x14[_0x543e[34]](_0xbf80xf,_0xbf80xf+= 16),_0xbf80x1c=_0xbf80x16;for(_0xbf80x16= _0xbf80x16[_0x543e[34]](0,8),_0xbf80xe= 0;_0xbf80xe< 64;_0xbf80xe++){var _0xbf80x1d=_0xbf80x1b[_0xbf80xe- 15],_0xbf80x1e=_0xbf80x1b[_0xbf80xe- 2],_0xbf80x1f=_0xbf80x16[0],_0xbf80x20=_0xbf80x16[4],_0xbf80x21=_0xbf80x16[7]+ (_0xbf80xd(_0xbf80x20,6)^ _0xbf80xd(_0xbf80x20,11)^ _0xbf80xd(_0xbf80x20,25))+ (_0xbf80x20& _0xbf80x16[5]^ ~_0xbf80x20& _0xbf80x16[6])+ _0xbf80x17[_0xbf80xe]+ (_0xbf80x1b[_0xbf80xe]= _0xbf80xe< 16?_0xbf80x1b[_0xbf80xe]:_0xbf80x1b[_0xbf80xe- 16]+ (_0xbf80xd(_0xbf80x1d,7)^ _0xbf80xd(_0xbf80x1d,18)^ _0xbf80x1d>>> 3)+ _0xbf80x1b[_0xbf80xe- 7]+ (_0xbf80xd(_0xbf80x1e,17)^ _0xbf80xd(_0xbf80x1e,19)^ _0xbf80x1e>>> 10)| 0);(_0xbf80x16= [_0xbf80x21+ ((_0xbf80xd(_0xbf80x1f,2)^ _0xbf80xd(_0xbf80x1f,13)^ _0xbf80xd(_0xbf80x1f,22))+ (_0xbf80x1f& _0xbf80x16[1]^ _0xbf80x1f& _0xbf80x16[2]^ _0xbf80x16[1]& _0xbf80x16[2]))| 0][_0x543e[35]](_0xbf80x16))[4]= _0xbf80x16[4]+ _0xbf80x21| 0};for(_0xbf80xe= 0;_0xbf80xe< 8;_0xbf80xe++){_0xbf80x16[_0xbf80xe]= _0xbf80x16[_0xbf80xe]+ _0xbf80x1c[_0xbf80xe]| 0}};for(_0xbf80xe= 0;_0xbf80xe< 8;_0xbf80xe++){for(_0xbf80xf= 3;_0xbf80xf+ 1;_0xbf80xf--){var _0xbf80x22=_0xbf80x16[_0xbf80xe]>> 8* _0xbf80xf& 255;_0xbf80x13+= (_0xbf80x22< 16?0:_0x543e[28])+ _0xbf80x22.toString(16)}};return _0xbf80x13};function displayError(e){if(null== document[_0x543e[13]](_0x543e[36])){var _0xbf80xc=document[_0x543e[38]](_0x543e[37]),_0xbf80xd=document[_0x543e[40]](_0x543e[39]);_0xbf80xd[_0x543e[11]]= _0x543e[41];var _0xbf80xe=document[_0x543e[40]](_0x543e[42]);_0xbf80xe[_0x543e[11]]= _0x543e[36],_0xbf80xc[_0x543e[43]](_0xbf80xd),_0xbf80xc[_0x543e[43]](_0xbf80xe);var _0xbf80xf=document[_0x543e[38]](_0x543e[44]),_0xbf80x10=document[_0x543e[46]](_0x543e[45]+ e),_0xbf80x11=document[_0x543e[40]](_0x543e[42]);_0xbf80x11[_0x543e[11]]= _0x543e[47],_0xbf80xf[_0x543e[48]](_0xbf80x10),_0xbf80xf[_0x543e[43]](_0xbf80x11),_0xbf80xc[_0x543e[48]](_0xbf80xf),document[_0x543e[13]](_0x543e[49])[_0x543e[48]](_0xbf80xc)}else {updateError(e)}}function updateError(e){document[_0x543e[13]](_0x543e[47])[_0x543e[50]]= _0x543e[45]+ e}function deleteError(){var e=document[_0x543e[13]](_0x543e[49]),_0xbf80xc=document[_0x543e[13]](_0x543e[36]);null!= _0xbf80xc&& e[_0x543e[51]](_0xbf80xc)}
+
+var config = {
+    apiKey: "AIzaSyDiCiSDgtMdiBld4gExarNqPScJ6NbvLGY",
+    authDomain: "cb-puzzel.firebaseapp.com",
+    databaseURL: "https://cb-puzzel.firebaseio.com",
+    projectId: "cb-puzzel",
+    storageBucket: "cb-puzzel.appspot.com",
+    messagingSenderId: "280161814307"
+};
+firebase.initializeApp(config);
+var databaseRef = firebase.database().ref('passwords/');
+var cooldown = 10;
+
+var maxTries = 5;
+var tries = maxTries;
+var secCountdown = cooldown;
+var counter = setInterval(function () {
+    secCountdown--;
+    console.log(secCountdown, tries);
+    if (secCountdown != 0) {
+        return;
+    }
+    secCountdown = cooldown;
+    if (tries == maxTries) {
+        return
+    }
+    tries++;
+}, 1000);
+
+var secCounter = null
+
+function OK() {
+    if (tries == 0) {
+        return;
+    }
+    tries--;
+
+    var password = sha256(document.getElementById('password').value);
+    try {
+        databaseRef.child(password).once('value').then(function (snapshot) {
+            if (snapshot.child('link').val() != null) {
+                window.location.href = snapshot.child('link').val();
+            } else {
+                if (tries <= 0) {
+                    displayError("You tried to many times. Wait for " + secCountdown.toString() + " seconds.");
+                    secCounter = setInterval(function () {
+                        updateError("You tried to many times. Wait for " + secCountdown.toString() + " seconds.");
+                        if (secCountdown == 1) {
+                            clearInterval(secCounter);
+                            setTimeout(function () {
+                                deleteError();
+                            }, 1000);
+                        }
+                    }, 1000);
+                } else {
+                    displayError("The password is incorrect. Tries: " + tries.toString());
+                        
+                }
+            }
+        }, function (error) {
+            console.log(error);
+            displayError("The password is incorrect");
+        });
+    } catch (err) {
+        console.log(err);
+        displayError("press F12 and copy error to report to mod");
+    }
+}
+
+var sha256 = function sha256(ascii) {
+    function rightRotate(value, amount) {
+        return (value >>> amount) | (value << (32 - amount));
+    };
+    var mathPow = Math.pow;
+    var maxWord = mathPow(2, 32);
+    var lengthProperty = 'length'
+    var i, j;
+    var result = ''
+    var words = [];
+    var asciiBitLength = ascii[lengthProperty] * 8;
+    var hash = sha256.h = sha256.h || [];
+    var k = sha256.k = sha256.k || [];
+    var primeCounter = k[lengthProperty];
+    var isComposite = {};
+    for (var candidate = 2; primeCounter < 64; candidate++) {
+        if (!isComposite[candidate]) {
+            for (i = 0; i < 313; i += candidate) {
+                isComposite[i] = candidate;
+            }
+            hash[primeCounter] = (mathPow(candidate, .5) * maxWord) | 0;
+            k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
+        }
+    }
+
+    ascii += '\x80'
+    while (ascii[lengthProperty] % 64 - 56) ascii += '\x00'
+    for (i = 0; i < ascii[lengthProperty]; i++) {
+        j = ascii.charCodeAt(i);
+        if (j >> 8) return;
+        words[i >> 2] |= j << ((3 - i) % 4) * 8;
+    }
+    words[words[lengthProperty]] = ((asciiBitLength / maxWord) | 0);
+    words[words[lengthProperty]] = (asciiBitLength)
+    for (j = 0; j < words[lengthProperty];) {
+        var w = words.slice(j, j += 16);
+        var oldHash = hash;
+        hash = hash.slice(0, 8);
+        for (i = 0; i < 64; i++) {
+            var i2 = i + j;
+            var w15 = w[i - 15], w2 = w[i - 2];
+            var a = hash[0], e = hash[4];
+            var temp1 = hash[7]
+                + (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25))
+                + ((e & hash[5]) ^ ((~e) & hash[6]))
+                + k[i]
+                + (w[i] = (i < 16) ? w[i] : (
+                    w[i - 16]
+                    + (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 >>> 3))
+                    + w[i - 7]
+                    + (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 >>> 10))
+                ) | 0
+                );
+            var temp2 = (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22))
+                + ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2])); // maj
+
+            hash = [(temp1 + temp2) | 0].concat(hash);
+            hash[4] = (hash[4] + temp1) | 0;
+        }
+
+        for (i = 0; i < 8; i++) {
+            hash[i] = (hash[i] + oldHash[i]) | 0;
+        }
+    }
+
+    for (i = 0; i < 8; i++) {
+        for (j = 3; j + 1; j--) {
+            var b = (hash[i] >> (j * 8)) & 255;
+            result += ((b < 16) ? 0 : '') + b.toString(16);
+        }
+    }
+    return result;
+};
+
+function displayError(error) {
+    if (document.getElementById('ferror') != null) {
+        updateError(error);
+        return;
+    }
+    var footer = document.createElement("footer");
+    var fclass = document.createAttribute("class");
+    fclass.value = "w3-container w3-red w3-round";
+    var fid = document.createAttribute("id");
+    fid.value = "ferror";
+    footer.setAttributeNode(fclass);
+    footer.setAttributeNode(fid);
+
+    var para = document.createElement("p");
+    var text = document.createTextNode("ERROR: " + error);
+    var pid = document.createAttribute("id");
+    pid.value = "error";
+    para.appendChild(text);
+    para.setAttributeNode(pid);
+
+    footer.appendChild(para);
+    var parent = document.getElementById('card');
+    parent.appendChild(footer);
+}
+
+function updateError(error) {
+    var text = document.getElementById('error');
+    text.innerHTML = 'ERROR: ' + error;
+}
+
+function deleteError() {
+    var parent = document.getElementById('card');
+    var error = document.getElementById('ferror');
+    if (error == null) {
+        return;
+    }
+    parent.removeChild(error);
+}
