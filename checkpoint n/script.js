@@ -14,9 +14,9 @@ var regex = /@[^#@:]+#[0-9]+/gm;
 var nameRegex = /@([^#@:]+)#[0-9]+/gm;
 var idRegex = /@[^#@:]+#([0-9]+)/gm;
 
-var checkpoint = 1;
-
-var endFile = "./thanks.html"
+const checkpoint = 1;
+const endFile = "./thanks.html";
+const commentForm = "d/e/1FAIpQLSdBKir7bWWnYQEfx2mT5TR_3UHlEhX8_5rP5vcUB6Q9RVNbfA";
 
 function OK() {
     var rawName = document.getElementById('Name').value;
@@ -45,6 +45,8 @@ function OK() {
             checkpoint: checkpoint,
             timestamp: firebase.database.ServerValue.TIMESTAMP
         }).then(function (snapshot) {
+            saveComment(comment);
+            sleep(500);
             window.location.href = endFile;
         }, function (error) {
             databaseRef.child(name + id).once('value').then(function (snapshot) {
@@ -66,6 +68,26 @@ function OK() {
     } catch (err) {
         console.log(err);
         displayError("press F12 and copy error to report to mod");
+    }
+}
+
+function saveComment(comment) {
+    $.ajax({
+        url: "https://docs.google.com/forms/" + commentForm + "/formResponse",
+        type: "post",
+        data: {
+            "entry.939889251": checkpoint,
+            "entry.427085054": comment
+        },
+        success: function (data) {
+        }
+    });
+}
+
+function sleep(milliseconds) {
+    var currentTime = new Date().getTime();
+
+    while (currentTime + milliseconds >= new Date().getTime()) {
     }
 }
 
