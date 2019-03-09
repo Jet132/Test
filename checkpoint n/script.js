@@ -72,6 +72,7 @@ function OK() {
 }
 
 function saveComment(comment) {
+    if(comment === "") return;
     $.ajax({
         url: "https://docs.google.com/forms/" + commentForm + "/formResponse",
         type: "post",
